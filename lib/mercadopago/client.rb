@@ -26,6 +26,10 @@ module Mercadopago
       call_endpoint(Endpoint::PaymentMethods, method, data)
     end
 
+    def preference(method, data = {})
+      call_endpoint(Endpoint::Preference, method, data)
+    end
+
 
     private
     def call_endpoint(klazz, method, data)
